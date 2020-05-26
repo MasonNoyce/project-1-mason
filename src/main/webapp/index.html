@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <p>Available Types</p>
+      <p>ID,Name,Date,Time,Event,Status,Latitude,Longitude,Maximum Wind,
+         Minimum Pressure,Low Wind NE,Low Wind SE,Low Wind SW,Low Wind NW,Moderate Wind NE,
+         Moderate Wind SE,Moderate Wind SW,Moderate Wind NW,High Wind NE,High Wind SE,High Wind SW,High Wind NW</p>
+         <p>Get a certain item by column </p>
+      <form method = "GET" action = "WeatherServlet">
+         Hurricane Type: <input type = "text" name = "HType"/>
+         Hurricane Val: <input type = "text" name = "HVar"/>
+         Hurricane numToShow: <input type = "text" name = "HNum"/> 
+      <input type="submit" value="Search" />
+      </form>
+      <p>Return Hurricanes with windspeeds greater then input</p>
+      <form method = "GET" action = "DateServlet">
+         Hurricane WindSpead > <input type = "text" name = "HVar"/>
+         Hurricane numToShow: <input type = "text" name = "HNum"/> 
+         <input type="submit" value="Search" />
+      </form>
+
+   </form>
+   <p>Number of given column</p>
+   <form method = "GET" action = "CountServlet">
+      Hurricane Column  <input type = "text" name = "HCol"/>
+      Hurricane numToShow: <input type = "text" name = "HNum"/> 
+      <input type="submit" value="Search" />
+   </form>      
+   <p>col1 Averages of col2</p>
+      <form method = "GET" action = "GAServlet">
+         Group col1: <input type = "text" name = "HCol1"/>
+         Average col2: <input type = "text" name = "HCol2"/>
+         Hurricane numToShow: <input type = "text" name = "HNum"/> 
+      <input type="submit" value="Search" />
+      </form>
+
+
+      <h4>Add a Hurricane</h4>
+      <form method = "GET" action = "AddServlet">
+         Hurricane ID: <input type = "text" name = "HID"/>
+         Hurricane Name: <input type = "text" name = "HName"/>
+         Hurricane Date: <input type = "text" name = "HDate"/>
+         Hurricane Time: <input type = "text" name = "HTime"/>
+         Hurricane Event: <input type = "text" name = "HEvent"/>
+         Hurricane Status: <input type = "text" name = "HStatus"/>
+         Hurricane Longitude: <input type = "text" name = "HLong"/>
+         Hurricane Lattitude: <input type = "text" name = "HLat"/>
+      <input type="submit" value="Submit" />
+      </form>
+
+   </body>
+</html>
